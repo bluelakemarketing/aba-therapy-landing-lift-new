@@ -14,9 +14,9 @@ const Founder = () => {
 
       <div className="container mx-auto px-4 md:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          {/* Image Side */}
+          {/* Image Side - Made smaller */}
           <div className="relative order-2 lg:order-1 animate-slide-left">
-            <div className="relative rounded-2xl overflow-hidden shadow-xl">
+            <div className="relative max-w-xs mx-auto lg:max-w-sm rounded-2xl overflow-hidden shadow-xl">
               <img 
                 src="/lovable-uploads/1f85aefa-8d26-41df-ba56-5743d04297db.png" 
                 alt="Dovid Rotshtein - Founder of BlueLake Marketing" 
@@ -26,27 +26,27 @@ const Founder = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
             </div>
             
-            {/* Floating elements */}
-            <div className="absolute -bottom-6 -left-6 md:-bottom-8 md:-left-8 glass p-4 rounded-xl shadow-lg">
-              <div className="flex items-center gap-4">
-                <div className="bg-blue-600 rounded-lg p-3 text-white">
-                  <Trophy size={24} />
+            {/* Floating elements - Adjusted for smaller image */}
+            <div className="absolute -bottom-5 -left-5 md:-bottom-6 md:-left-6 glass p-3 rounded-xl shadow-lg">
+              <div className="flex items-center gap-3">
+                <div className="bg-blue-600 rounded-lg p-2 text-white">
+                  <Trophy size={20} />
                 </div>
                 <div>
-                  <p className="text-sm text-foreground/70">Experience</p>
-                  <p className="text-2xl font-bold text-foreground">15+ Years</p>
+                  <p className="text-xs text-foreground/70">Experience</p>
+                  <p className="text-xl font-bold text-foreground">15+ Years</p>
                 </div>
               </div>
             </div>
             
-            <div className="absolute -top-6 -right-6 md:-top-8 md:-right-8 glass p-4 rounded-xl shadow-lg">
-              <div className="flex items-center gap-4">
-                <div className="bg-teal-600 rounded-lg p-3 text-white">
-                  <Lightbulb size={24} />
+            <div className="absolute -top-5 -right-5 md:-top-6 md:-right-6 glass p-3 rounded-xl shadow-lg">
+              <div className="flex items-center gap-3">
+                <div className="bg-teal-600 rounded-lg p-2 text-white">
+                  <Lightbulb size={20} />
                 </div>
                 <div>
-                  <p className="text-sm text-foreground/70">Founder</p>
-                  <p className="text-2xl font-bold text-foreground">Since 2015</p>
+                  <p className="text-xs text-foreground/70">Founder</p>
+                  <p className="text-xl font-bold text-foreground">Since 2015</p>
                 </div>
               </div>
             </div>
