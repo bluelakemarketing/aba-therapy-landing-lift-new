@@ -1,13 +1,65 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from "react";
+import Navbar from "@/components/Navbar";
+import Hero from "@/components/Hero";
+import Services from "@/components/Services";
+import About from "@/components/About";
+import Approach from "@/components/Approach";
+import Testimonials from "@/components/Testimonials";
+import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
+import { toast } from "sonner";
+
+// Import for framer-motion
+<lov-add-dependency>framer-motion@latest</lov-add-dependency>
 
 const Index = () => {
+  useEffect(() => {
+    // Smooth scrolling for anchor links
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest('a');
+      
+      if (link && link.hash && link.hash.startsWith('#')) {
+        e.preventDefault();
+        const id = link.hash.substring(1);
+        const element = document.getElementById(id);
+        
+        if (element) {
+          window.scrollTo({
+            top: element.offsetTop - 80, // Offset for fixed header
+            behavior: 'smooth'
+          });
+        }
+      }
+    };
+    
+    document.addEventListener('click', handleAnchorClick);
+    
+    // Welcome toast
+    setTimeout(() => {
+      toast.success("Welcome to BlueLake Marketing! Scroll to explore our services.", {
+        position: "top-center",
+        duration: 5000,
+      });
+    }, 1500);
+    
+    return () => {
+      document.removeEventListener('click', handleAnchorClick);
+    };
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
-    </div>
+    <main className="min-h-screen bg-background text-foreground overflow-hidden">
+      <Navbar />
+      <Hero />
+      <Services />
+      <About />
+      <Approach />
+      <Testimonials />
+      <Contact />
+      <Footer />
+    </main>
   );
 };
 
