@@ -22,15 +22,48 @@ const Contact = () => {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Prepare email data
+      const emailData = {
+        to: "dovid@bluelakemarketing.com",
+        subject: `New contact form submission from ${formData.name}`,
+        message: `
+          Name: ${formData.name}
+          Email: ${formData.email}
+          Phone: ${formData.phone || 'Not provided'}
+          ABA Practice: ${formData.company}
+          
+          Message:
+          ${formData.message}
+        `,
+      };
+      
+      // Send form data via email
+      const response = await fetch("https://formsubmit.co/dovid@bluelakemarketing.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          ...formData,
+          _subject: `New Contact from ${formData.name} - BlueLake Marketing`,
+        }),
+      });
+      
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+      
       toast.success("Thank you for your message! We'll be in touch soon.", {
         position: "top-center",
       });
+      
+      // Reset form
       setFormData({
         name: "",
         email: "",
@@ -38,8 +71,14 @@ const Contact = () => {
         company: "",
         message: "",
       });
+    } catch (error) {
+      console.error("Error sending message:", error);
+      toast.error("There was a problem sending your message. Please try again.", {
+        position: "top-center",
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
