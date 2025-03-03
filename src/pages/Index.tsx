@@ -9,9 +9,7 @@ import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import { toast } from "sonner";
-
-// Import for framer-motion
-<lov-add-dependency>framer-motion@latest</lov-add-dependency>
+import { motion } from "framer-motion";
 
 const Index = () => {
   useEffect(() => {
