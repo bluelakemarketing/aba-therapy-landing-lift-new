@@ -15,7 +15,7 @@ const Hero = () => {
       <div className="container mx-auto px-4 md:px-8">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           {/* Text Content */}
-          <div className="w-full lg:w-1/2 space-y-6 animate-fade-in">
+          <div className="w-full lg:w-1/2 space-y-6 animate-fade-in z-10">
             <div className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-700 text-sm font-medium">
               ABA Therapy Digital Marketing Specialists
             </div>
@@ -44,8 +44,8 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Image */}
-          <div className="w-full lg:w-1/2 relative animate-slide-up">
+          {/* Image - Fixed positioning issues */}
+          <div className="w-full lg:w-1/2 relative animate-slide-up z-0 lg:z-10 mt-8 lg:mt-0">
             <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
               <img 
                 src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=2070&auto=format&fit=crop" 
@@ -56,8 +56,8 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent mix-blend-multiply"></div>
             </div>
             
-            {/* Floating stat card */}
-            <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.5s' }}>
+            {/* Floating stat card - Adjusted positioning for better layout */}
+            <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.5s', zIndex: 20 }}>
               <div className="flex items-center gap-4">
                 <div className="bg-blue-600 rounded-lg p-3 text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
@@ -69,8 +69,8 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Floating reviews card */}
-            <div className="absolute -top-6 -right-6 md:top-8 md:-right-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.8s' }}>
+            {/* Floating reviews card - Adjusted positioning for better layout */}
+            <div className="absolute -top-6 -right-6 md:top-8 md:-right-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.8s', zIndex: 20 }}>
               <div className="flex items-center gap-4">
                 <div className="bg-teal-600 rounded-lg p-3 text-white">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
