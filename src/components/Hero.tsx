@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -44,11 +43,11 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Image - Updated to use the new image */}
+          {/* Image - Updated with new image showing collaboration */}
           <div className="w-full lg:w-1/2 relative animate-slide-up z-0 lg:z-10 mt-8 lg:mt-0">
             <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="/lovable-uploads/aaca09a6-5f1b-4c27-b12e-713f2608d71a.png" 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop&q=90" 
                 alt="ABA Therapy Team Collaboration" 
                 className="w-full h-auto object-cover"
                 loading="lazy"
@@ -56,7 +55,7 @@ const Hero = () => {
               <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent mix-blend-multiply"></div>
             </div>
             
-            {/* Floating stat card - Adjusted positioning for better layout */}
+            {/* Floating stat card and reviews card */}
             <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.5s', zIndex: 20 }}>
               <div className="flex items-center gap-4">
                 <div className="bg-blue-600 rounded-lg p-3 text-white">
@@ -69,7 +68,6 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Floating reviews card - Adjusted positioning for better layout */}
             <div className="absolute -top-6 -right-6 md:top-8 md:-right-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.8s', zIndex: 20 }}>
               <div className="flex items-center gap-4">
                 <div className="bg-teal-600 rounded-lg p-3 text-white">
