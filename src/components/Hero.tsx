@@ -1,3 +1,4 @@
+
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -43,12 +44,12 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Image - Updated with new image showing collaboration */}
+          {/* Image - Updated with new collaboration image */}
           <div className="w-full lg:w-1/2 relative animate-slide-up z-0 lg:z-10 mt-8 lg:mt-0">
             <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop&q=90" 
-                alt="ABA Therapy Team Collaboration" 
+                src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop&q=90" 
+                alt="Marketing Team Collaboration" 
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />
