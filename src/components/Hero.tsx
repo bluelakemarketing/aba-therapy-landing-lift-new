@@ -44,12 +44,12 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Image - Fixed positioning issues */}
+          {/* Image - Updated to use the new image */}
           <div className="w-full lg:w-1/2 relative animate-slide-up z-0 lg:z-10 mt-8 lg:mt-0">
             <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" 
-                alt="ABA Therapy Marketing" 
+                src="/lovable-uploads/aaca09a6-5f1b-4c27-b12e-713f2608d71a.png" 
+                alt="ABA Therapy Team Collaboration" 
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />
