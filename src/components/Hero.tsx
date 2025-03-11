@@ -1,4 +1,3 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -44,45 +43,16 @@ const Hero = () => {
             </div>
           </div>
           
-          {/* Image - Restored to the two women talking image */}
+          {/* Image - Office marketing team working on laptops with privacy-focused overlay */}
           <div className="w-full lg:w-1/2 relative animate-slide-up z-0 lg:z-10 mt-8 lg:mt-0">
             <div className="relative z-10 overflow-hidden rounded-2xl shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=1200&auto=format&fit=crop&q=90" 
-                alt="ABA Therapy Marketing" 
+                src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200&auto=format&fit=crop&q=90" 
+                alt="Marketing Team Collaboration" 
                 className="w-full h-auto object-cover"
                 loading="lazy"
               />
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/20 to-transparent mix-blend-multiply"></div>
-            </div>
-            
-            {/* Floating stat card and reviews card */}
-            <div className="absolute -bottom-6 -left-6 md:bottom-8 md:-left-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.5s', zIndex: 20 }}>
-              <div className="flex items-center gap-4">
-                <div className="bg-blue-600 rounded-lg p-3 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-trending-up"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></svg>
-                </div>
-                <div>
-                  <p className="text-sm text-foreground/70">Average Client Growth</p>
-                  <p className="text-xl font-bold text-foreground">35% Increase</p>
-                </div>
-              </div>
-            </div>
-            
-            <div className="absolute -top-6 -right-6 md:top-8 md:-right-12 glass p-4 rounded-xl shadow-lg animate-fade-in" style={{ animationDelay: '0.8s', zIndex: 20 }}>
-              <div className="flex items-center gap-4">
-                <div className="bg-teal-600 rounded-lg p-3 text-white">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                </div>
-                <div>
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <svg key={i} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="#FACC15" stroke="#FACC15" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    ))}
-                  </div>
-                  <p className="text-sm text-foreground/70">Client Satisfaction</p>
-                </div>
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-blue-900/50 to-blue-800/30 mix-blend-multiply"></div>
             </div>
           </div>
         </div>
